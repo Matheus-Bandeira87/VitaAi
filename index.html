@@ -3,64 +3,728 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VitaAI</title>
+    <title>VitaAI — Rotina, foco, treino e Food Scan</title>
+    <meta name="description" content="VitaAI é uma IA para rotina, foco, estudos, hábitos, treino e análise visual de alimentos.">
+    <link rel="icon" href="assets/logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="mobile-topbar">
-    <button onclick="toggleSidebar()">☰</button>
-    <h2>VitaAI</h2>
-    <button onclick="newChat()">+</button>
-</div>
+    <div class="bg-glow"></div>
 
-<div class="app">
+    <div class="splash-screen" id="splashScreen">
 
-    <aside class="sidebar" id="sidebar">
-        <div class="brand">
-            <h1>VitaAI</h1>
-            <p>Histórico de conversas</p>
+        <div class="splash-particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
 
-        <button class="new-chat" onclick="newChat()">+ Nova conversa</button>
+        <div class="splash-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-        <div id="chatList" class="chat-list"></div>
+        <div class="splash-orbit"></div>
 
-        <button class="clear" onclick="clearAllChats()">Limpar histórico</button>
-    </aside>
+        <div class="splash-word">
+            <span class="splash-v">V</span>
+            <span class="splash-letter">i</span>
+            <span class="splash-letter">t</span>
+            <span class="splash-letter">a</span>
+            <span class="splash-ai">AI</span>
+        </div>
 
-    <main class="main">
+        <div class="splash-subtitle">
+            Begin experience
+        </div>
 
-        <section class="hero">
-            <span>IA de rotina, hábitos e produtividade</span>
-            <h1>VitaAI</h1>
-            <p>Converse sobre foco, estudos, organização, sono, hábitos, produtividade e bem-estar.</p>
-        </section>
+    </div>
 
-        <section class="chat-card">
+    <header class="mobile-topbar">
+        <button type="button" onclick="toggleSidebar()" class="icon-btn">☰</button>
+        <strong>VitaAI</strong>
+        <button type="button" onclick="newChat()" class="icon-btn">+</button>
+    </header>
 
-            <div class="chat-header">
-                <div>
-                    <h2 id="chatTitle">Nova conversa</h2>
-                    <p>Resposta inteligente com contexto</p>
+    <section class="landing hidden" id="landingPage">
+
+        <div class="landing-shell">
+
+            <div class="landing-main">
+
+                <div class="landing-left">
+
+                    <div class="landing-brand-mini">
+                        <img src="assets/logo.png" alt="Logo VitaAI">
+                        <span>VitaAI Beta</span>
+                    </div>
+
+                    <h1>Sua rotina, treino e hábitos mais claros.</h1>
+
+                    <p>
+                        A VitaAI junta organização, foco, estudos, hábitos, treino,
+                        análise de alimentos por foto e planejamento pessoal em uma
+                        experiência simples, bonita e inteligente.
+                    </p>
+
+                    <div class="landing-actions">
+                        <button type="button" onclick="enterApp()">
+                            Começar agora
+                        </button>
+
+                        <button type="button" class="secondary" onclick="scrollLandingInfo()">
+                            Ver recursos
+                        </button>
+                    </div>
+
+                    <div class="landing-mini-info">
+                        <span>Chat inteligente</span>
+                        <span>Food Scan</span>
+                        <span>Fit Mode</span>
+                    </div>
+
                 </div>
 
-                <span class="status">Online</span>
+                <div class="landing-art">
+
+                    <div class="orb orb-one"></div>
+                    <div class="orb orb-two"></div>
+                    <div class="orb orb-three"></div>
+
+                    <div class="phone-card">
+
+                        <div class="phone-top">
+                            <div></div>
+                            <span>VitaAI</span>
+                            <div></div>
+                        </div>
+
+                        <div class="phone-message ai-msg">
+                            Organizei seu treino da semana.
+                        </div>
+
+                        <div class="phone-message user-msg">
+                            E meu almoço?
+                        </div>
+
+                        <div class="phone-scan">
+                            <div class="scan-icon">📷</div>
+
+                            <div>
+                                <strong>Food Scan</strong>
+                                <span>Proteínas, calorias e alimentos</span>
+                            </div>
+                        </div>
+
+                        <div class="phone-bars">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div id="messages" class="messages"></div>
-
-            <div class="input-area">
-                <textarea id="question" placeholder="Digite sua pergunta..."></textarea>
-                <button id="askButton" onclick="askAI()">➜</button>
+            <div class="scroll-hint">
+                Role para ver os recursos
+                <span>↓</span>
             </div>
 
-        </section>
+            <div class="resources-section" id="landingInfo">
 
-    </main>
+                <div class="section-heading">
+                    <span>Recursos</span>
 
-</div>
+                    <h2>O que a VitaAI faz?</h2>
 
-<script src="script.js"></script>
+                    <p>
+                        Uma central simples para organizar sua rotina, melhorar seus hábitos,
+                        acompanhar sua evolução e testar ideias com inteligência artificial.
+                    </p>
+                </div>
+
+                <div class="landing-grid">
+
+                    <div>
+                        <h3>Chat Mode</h3>
+                        <p>
+                            Converse sobre rotina, foco, estudos, produtividade,
+                            organização e decisões do dia a dia.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Food Scan</h3>
+                        <p>
+                            Envie uma foto do alimento e receba uma análise visual
+                            aproximada com proteínas, calorias e observações.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Fit Mode</h3>
+                        <p>
+                            Monte treinos com objetivo, nível, local, dias por semana
+                            e observações pessoais.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Gym Lab</h3>
+                        <p>
+                            Organize divisão muscular, volume semanal, foco de treino
+                            e ajustes para evolução.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Histórico</h3>
+                        <p>
+                            Suas conversas ficam salvas no navegador para continuar
+                            ideias e planejamentos depois.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Atualizações</h3>
+                        <p>
+                            Veja novidades, melhorias e versões novas sempre que
+                            a VitaAI receber uma função importante.
+                        </p>
+                    </div>
+
+                </div>
+
+                <p class="landing-warning">
+                    A VitaAI não substitui médicos, nutricionistas, professores ou profissionais de saúde.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="app hidden" id="app">
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+                <img src="assets/logo.png" class="logo-img" alt="Logo VitaAI">
+
+                <div>
+                    <h1>VitaAI</h1>
+                    <p>Rotina inteligente</p>
+                </div>
+            </div>
+
+            <button type="button" class="new-chat" onclick="newChat()">
+                + Nova conversa
+            </button>
+
+            <div class="mode-title">Modos</div>
+
+            <button type="button" class="mode-btn active" id="chatModeBtn" onclick="showChatMode()">
+                Chat Mode
+            </button>
+
+            <button type="button" class="mode-btn" id="foodModeBtn" onclick="showFoodMode()">
+                Food Scan
+            </button>
+
+            <button type="button" class="mode-btn" id="fitModeBtn" onclick="showFitMode()">
+                Fit Mode
+            </button>
+
+            <button type="button" class="mode-btn" id="gymModeBtn" onclick="showGymMode()">
+                Gym Lab
+            </button>
+<button type="button" class="mode-btn" id="progressModeBtn" onclick="showProgressMode()">
+    Vita Progress
+</button>
+            <button type="button" class="mode-btn" id="aboutModeBtn" onclick="showAboutMode()">
+                Sobre
+            </button>
+
+            <button type="button" class="mode-btn" id="updatesModeBtn" onclick="showUpdatesMode()">
+                Atualizações
+            </button>
+
+            <div class="usage-box">
+                <span>Mensagens restantes hoje</span>
+                <strong id="messagesLeft">20</strong>
+            </div>
+
+            <div class="history-title">Histórico</div>
+
+            <div id="chatList" class="chat-list"></div>
+
+            <button type="button" class="clear" onclick="clearAllChats()">
+                Limpar histórico
+            </button>
+
+        </aside>
+
+        <main class="main">
+
+            <section class="hero">
+                <div class="badge">IA de hábitos, foco, treino e produtividade</div>
+
+                <h1>Organize sua vida com clareza.</h1>
+
+                <p>
+                    Planeje estudos, rotina, alimentação visual, treino e evolução física
+                    com uma interface simples e moderna.
+                </p>
+            </section>
+
+            <section class="quick-actions" id="quickActions">
+
+                <button type="button" onclick="useSuggestion('Monte uma rotina produtiva para o meu dia de hoje')">
+                    Rotina do dia
+                </button>
+
+                <button type="button" onclick="useSuggestion('Me ajude a estudar melhor sem procrastinar')">
+                    Estudos
+                </button>
+
+                <button type="button" onclick="useSuggestion('Como posso melhorar meu foco agora?')">
+                    Foco
+                </button>
+
+                <button type="button" onclick="showFitMode()">
+                    Criar treino
+                </button>
+
+            </section>
+
+            <section class="chat-card" id="chatView">
+
+                <div class="chat-header">
+                    <div>
+                        <h2 id="chatTitle">Nova conversa</h2>
+                        <p>Resposta com contexto e próximos passos</p>
+                    </div>
+
+                    <span class="status">Online</span>
+                </div>
+
+                <div id="messages" class="messages"></div>
+
+                <div class="input-area">
+                    <textarea id="question" placeholder="Pergunte alguma coisa..."></textarea>
+
+                    <button id="askButton" type="button">
+                        ➜
+                    </button>
+                </div>
+
+            </section>
+
+            <section class="food-card hidden" id="foodView">
+
+                <div class="chat-header">
+                    <div>
+                        <h2>Food Scan</h2>
+                        <p>Análise visual aproximada de alimentos</p>
+                    </div>
+
+                    <span class="status">Beta</span>
+                </div>
+
+                <div class="food-content">
+
+                    <div class="upload-box" onclick="document.getElementById('foodImage').click()">
+
+                        <input 
+                            type="file" 
+                            id="foodImage" 
+                            accept="image/*" 
+                            onchange="previewFoodImage(event)"
+                        >
+
+                        <div id="uploadPlaceholder">
+                            <div class="upload-icon">📷</div>
+
+                            <h3>Enviar foto do alimento</h3>
+
+                            <p>
+                                Escolha uma imagem ou tire uma foto pelo celular.
+                            </p>
+                        </div>
+
+                        <img id="foodPreview" class="food-preview hidden" alt="Prévia do alimento">
+
+                    </div>
+
+                    <div class="food-question-box">
+                        <textarea 
+                            id="foodQuestion"
+                            placeholder="Escreva algo junto com a foto... Ex: quanto de proteína tem? Isso serve para pós-treino?"
+                        ></textarea>
+                    </div>
+
+                    <div class="food-presets">
+                        <button type="button" onclick="setFoodQuestion('Quanto de proteína tem aproximadamente?')">
+                            Proteína
+                        </button>
+
+                        <button type="button" onclick="setFoodQuestion('Me dê uma estimativa de calorias.')">
+                            Calorias
+                        </button>
+
+                        <button type="button" onclick="setFoodQuestion('Isso serve para pós-treino?')">
+                            Pós-treino
+                        </button>
+                    </div>
+
+                    <button type="button" class="analyze-btn" onclick="analyzeFood()">
+                        Analisar com VitaAI
+                    </button>
+
+                    <button type="button" class="reset-food-btn" onclick="resetFoodScan()">
+                        Nova análise
+                    </button>
+
+                    <div class="food-warning">
+                        As informações são estimativas visuais e não substituem nutricionista.
+                    </div>
+
+                    <div id="foodResult" class="food-result">
+                        O resultado da análise aparecerá aqui.
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="fit-card hidden" id="fitView">
+
+                <div class="chat-header">
+                    <div>
+                        <h2>Fit Mode</h2>
+                        <p>Treinos inteligentes para musculação e rotina física</p>
+                    </div>
+
+                    <span class="status">Beta</span>
+                </div>
+
+                <div class="fit-content">
+
+                    <div class="fit-hero">
+                        <h3>Monte seu treino com a VitaAI</h3>
+
+                        <p>
+                            Escolha objetivo, nível, dias por semana e local. A VitaAI monta
+                            um treino organizado com séries, repetições, descanso e observações.
+                        </p>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-field">
+                            <label>Objetivo</label>
+
+                            <select id="fitGoal">
+                                <option>Ganhar massa muscular</option>
+                                <option>Perder gordura</option>
+                                <option>Melhorar condicionamento</option>
+                                <option>Força</option>
+                                <option>Treino geral saudável</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label>Nível</label>
+
+                            <select id="fitLevel">
+                                <option>Iniciante</option>
+                                <option>Intermediário</option>
+                                <option>Avançado</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label>Dias por semana</label>
+
+                            <select id="fitDays">
+                                <option>2 dias</option>
+                                <option>3 dias</option>
+                                <option>4 dias</option>
+                                <option>5 dias</option>
+                                <option>6 dias</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label>Local</label>
+
+                            <select id="fitPlace">
+                                <option>Academia</option>
+                                <option>Casa</option>
+                                <option>Academia + casa</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-field full">
+                        <label>Observações</label>
+
+                        <textarea 
+                            id="fitNotes"
+                            placeholder="Ex: tenho pouco tempo, quero foco em peito e braço, tenho dor no joelho, treino à noite..."
+                        ></textarea>
+                    </div>
+
+                    <button type="button" class="primary-action" onclick="generateFitPlan()">
+                        Gerar treino com VitaAI
+                    </button>
+
+                    <div class="mode-warning">
+                        A VitaAI não substitui professor, médico ou fisioterapeuta. Treine com segurança.
+                    </div>
+
+                    <div id="fitResult" class="mode-result">
+                        Seu treino aparecerá aqui.
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="gym-card hidden" id="gymView">
+
+                <div class="chat-header">
+                    <div>
+                        <h2>Gym Lab</h2>
+                        <p>Planejamento de divisão, volume e foco muscular</p>
+                    </div>
+
+                    <span class="status">New</span>
+                </div>
+
+                <div class="gym-content">
+
+                    <div class="fit-hero">
+                        <h3>Organize sua evolução na musculação</h3>
+
+                        <p>
+                            Ideal para quem já treina e quer montar uma divisão mais inteligente,
+                            com foco muscular e volume semanal equilibrado.
+                        </p>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-field">
+                            <label>Foco principal</label>
+
+                            <select id="gymFocus">
+                                <option>Peito, ombro e tríceps</option>
+                                <option>Costas e bíceps</option>
+                                <option>Pernas completas</option>
+                                <option>Glúteos e posteriores</option>
+                                <option>Superior completo</option>
+                                <option>Corpo inteiro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label>Divisão desejada</label>
+
+                            <select id="gymSplit">
+                                <option>ABC</option>
+                                <option>AB</option>
+                                <option>Upper/Lower</option>
+                                <option>Push/Pull/Legs</option>
+                                <option>Full body</option>
+                                <option>Não sei, escolha por mim</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label>Tempo por treino</label>
+
+                            <select id="gymTime">
+                                <option>30 minutos</option>
+                                <option>45 minutos</option>
+                                <option>60 minutos</option>
+                                <option>75 minutos</option>
+                                <option>90 minutos</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label>Prioridade</label>
+
+                            <select id="gymPriority">
+                                <option>Hipertrofia</option>
+                                <option>Força</option>
+                                <option>Resistência</option>
+                                <option>Técnica e execução</option>
+                                <option>Equilíbrio geral</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-field full">
+                        <label>Detalhes do treino atual</label>
+
+                        <textarea 
+                            id="gymNotes"
+                            placeholder="Ex: treino 4x por semana, sinto que braço não evolui, faço peito duas vezes..."
+                        ></textarea>
+                    </div>
+
+                    <button type="button" class="primary-action" onclick="generateGymLab()">
+                        Montar planejamento
+                    </button>
+
+                    <div class="mode-warning">
+                        Use como base de organização. Ajustes técnicos devem ser feitos com professor.
+                    </div>
+
+                    <div id="gymResult" class="mode-result">
+                        Seu planejamento aparecerá aqui.
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="about-card hidden" id="aboutView">
+
+                <div class="chat-header">
+                    <div>
+                        <h2>Sobre a VitaAI</h2>
+                        <p>Conheça melhor o projeto</p>
+                    </div>
+
+                    <span class="status">Beta</span>
+                </div>
+
+                <div class="about-content">
+
+                    <div class="about-block">
+                        <h3>O que é a VitaAI?</h3>
+
+                        <p>
+                            A VitaAI é uma assistente inteligente feita para ajudar com rotina,
+                            foco, estudos, hábitos, produtividade, treino e organização do dia a dia.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>Food Scan</h3>
+
+                        <p>
+                            Permite enviar uma foto de alimento ou refeição para receber uma análise visual
+                            aproximada com possíveis alimentos, calorias e nutrientes.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>Fit Mode e Gym Lab</h3>
+
+                        <p>
+                            Ajudam a estruturar treinos e organizar foco muscular, volume e rotina física
+                            de forma simples e educativa.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>Importante</h3>
+
+                        <p>
+                            A VitaAI não substitui médicos, nutricionistas, psicólogos, professores
+                            ou qualquer profissional de saúde.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>Status do projeto</h3>
+
+                        <p>
+                            Este projeto está em versão beta. Novas funções, melhorias visuais e ajustes
+                            de resposta podem ser adicionados com o tempo.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>Termos e avisos</h3>
+
+                        <p>
+                            As respostas podem conter erros. Use as informações como apoio, não como decisão médica,
+                            nutricional ou de treinamento profissional.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="updates-card hidden" id="updatesView">
+
+                <div class="chat-header">
+                    <div>
+                        <h2>Atualizações</h2>
+                        <p>Novidades, melhorias e versões da VitaAI</p>
+                    </div>
+
+                    <span class="status">News</span>
+                </div>
+
+                <div class="updates-content" id="updatesList"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <div class="update-modal hidden" id="updateModal">
+
+        <div class="update-modal-box">
+
+            <div class="update-badge">
+                Nova atualização
+            </div>
+
+            <h2 id="updateModalTitle">
+                VitaAI foi atualizada
+            </h2>
+
+            <p id="updateModalText">
+                Confira as novidades da nova versão.
+            </p>
+
+            <div class="update-modal-actions">
+                <button type="button" onclick="openUpdatesFromModal()">
+                    Ver detalhes
+                </button>
+
+                <button type="button" class="secondary" onclick="closeUpdateModal()">
+                    Fechar
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

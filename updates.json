@@ -1,0 +1,114 @@
+[
+    {
+        "version": "1.5.2",
+        "title": "Nova introdução cinematográfica",
+        "date": "Atualização mais recente",
+        "description": "A VitaAI recebeu uma nova introdução visual com animação da marca, partículas tecnológicas e uma experiência inicial mais sofisticada.",
+        "items": [
+            "Nova animação de abertura com a palavra VitaAI",
+            "Letra V em destaque com efeito moderno",
+            "Partículas e linhas tecnológicas no fundo",
+            "Transição mais elegante para a tela inicial",
+            "Ajustes visuais para combinar com a nova identidade",
+            "Correção completa da estrutura de carregamento"
+        ]
+    },
+    {
+        "version": "1.5.1",
+        "title": "Correções de estabilidade",
+        "date": "Versão anterior",
+        "description": "A VitaAI recebeu uma atualização focada em estabilidade, experiência inicial e correções importantes na navegação.",
+        "items": [
+            "Correção da animação inicial",
+            "Correção da tela inicial no computador",
+            "Correção do botão Começar agora",
+            "Melhoria no carregamento da landing page",
+            "Ajustes para evitar tela preta ou telas duplicadas",
+            "Organização mais limpa entre HTML, CSS e JavaScript"
+        ]
+    },
+    {
+        "version": "1.5.0",
+        "title": "Fit Mode e Gym Lab",
+        "date": "Grande atualização fitness",
+        "description": "A VitaAI ganhou novos modos voltados para treino, musculação e organização da evolução física.",
+        "items": [
+            "Novo Fit Mode para montar treinos personalizados",
+            "Novo Gym Lab para organizar divisão muscular",
+            "Planejamento por objetivo, nível e dias por semana",
+            "Sugestões de séries, repetições e descanso",
+            "Avisos de segurança para treino e saúde",
+            "Integração melhor com a proposta de rotina e hábitos"
+        ]
+    },
+    {
+        "version": "1.4.0",
+        "title": "Food Scan aprimorado",
+        "date": "Atualização de alimentação visual",
+        "description": "O Food Scan ficou mais útil, permitindo enviar uma foto junto com uma pergunta personalizada.",
+        "items": [
+            "Análise visual de alimentos por imagem",
+            "Campo para perguntar junto da foto",
+            "Botões rápidos para proteína, calorias e pós-treino",
+            "Resultado separado por resumo, alimentos e estimativas",
+            "Avisos mais claros sobre valores aproximados",
+            "Melhor experiência para uso no celular"
+        ]
+    },
+    {
+        "version": "1.3.0",
+        "title": "Nova tela inicial premium",
+        "date": "Atualização visual",
+        "description": "A VitaAI recebeu uma tela inicial mais bonita, com apresentação clara, recursos destacados e visual mais profissional.",
+        "items": [
+            "Nova landing page com chamada principal",
+            "Botão Começar agora",
+            "Área de recursos do site",
+            "Arte visual animada",
+            "Melhor apresentação do propósito da VitaAI",
+            "Design mais moderno e confiável"
+        ]
+    },
+    {
+        "version": "1.2.0",
+        "title": "Histórico de conversas",
+        "date": "Atualização de organização",
+        "description": "As conversas passaram a ser salvas no navegador para facilitar a continuação de ideias, rotinas e planejamentos.",
+        "items": [
+            "Histórico lateral de conversas",
+            "Conversas salvas localmente no navegador",
+            "Criação de novas conversas",
+            "Apagar conversa individual",
+            "Limpar histórico completo",
+            "Títulos automáticos baseados na primeira mensagem"
+        ]
+    },
+    {
+        "version": "1.1.0",
+        "title": "Melhorias no chat",
+        "date": "Atualização de experiência",
+        "description": "O chat ficou mais estável, organizado e preparado para respostas mais completas.",
+        "items": [
+            "Melhor contexto nas respostas",
+            "Respostas menos cortadas",
+            "Botão de copiar resposta",
+            "Indicador de carregamento",
+            "Limite diário de mensagens",
+            "Mensagens de erro mais amigáveis"
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "title": "Primeira versão da VitaAI",
+        "date": "Lançamento inicial",
+        "description": "Primeira versão funcional da VitaAI, criada como uma assistente para rotina, foco, estudos, hábitos e produtividade.",
+        "items": [
+            "Chat com inteligência artificial",
+            "Design escuro moderno",
+            "Sugestões rápidas de perguntas",
+            "Interface simples e direta",
+            "Primeira identidade visual da VitaAI",
+            "Base inicial do projeto"
+        ]
+    }
+]
